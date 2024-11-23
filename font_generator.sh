@@ -743,17 +743,16 @@ while (i < SizeOf(input_list))
 
 # スペースの width 変更
     Print("Modified space width")
-    Select(0u2000); SetWidth(${width_hankaku})
-    Select(0u2001); SetWidth(${width_zenkaku})
-    Select(0u2002); SetWidth(${width_hankaku})
-    Select(0u2003); SetWidth(${width_zenkaku})
-    Select(0u2004, 0u200a); SetWidth(${width_hankaku})
-    Select(0u200b); SetWidth(0)
-    Select(0u202f); SetWidth(${width_hankaku})
-    Select(0u205f); SetWidth(${width_hankaku})
-    Select(0ufeff); SetWidth(0)
-
-    Print("Edit numbers")
+    Select(0u2000); SetWidth(${width_hankaku}) # en quad
+    Select(0u2001); SetWidth(${width_zenkaku}) # em quad
+    Select(0u2002); SetWidth(${width_hankaku}) # en space
+    Select(0u2003); SetWidth(${width_zenkaku}) # em space
+    Select(0u2004, 0u200a); SetWidth(${width_hankaku}) # three-per-em space..hair space
+    Select(0u200b); SetWidth(0) # zero width space
+    Select(0u202f); SetWidth(${width_hankaku}) # narrow no-break space
+    Select(0u205f); SetWidth(${width_hankaku}) # medium mathematical space
+    Select(0u2060); SetWidth(0) # word joiner
+    Select(0ufeff); SetWidth(0) # zero width no-break space
 
     Print("Edit alphabets")
 
