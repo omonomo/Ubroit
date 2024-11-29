@@ -1692,7 +1692,6 @@ while (i < SizeOf(input_list))
         Select(${address_store_mod}, ${address_store_mod} + ${num_mod_glyphs} * 6 - 1) # 保管したDQVZ
         SelectMore(${address_store_zero}, ${address_store_zero} + 5) # 保管したスラッシュ無し0
         SelectMore(${address_store_visi_latin}, ${address_store_visi_latin} + 1) # 保管した ⁄|
-        SelectMore(0uf6c5) #  (私用領域)
         Scale(${scale_width_latin}, ${scale_height_latin}, ${width_latin} / 2, 0)
         Move(${move_x_hankaku_latin}, 0)
         SetWidth(${width_hankaku})
