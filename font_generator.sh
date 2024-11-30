@@ -1112,10 +1112,10 @@ while (i < SizeOf(input_list))
     SetWidth(${width_hankaku})
 
 # ∀ (ベースフォントを置き換え)
- #    Select(0u0041); Copy() # A
- #    Select(0u2200); Paste() # ∀
- #    Rotate(180)
- #    SetWidth(${width_hankaku})
+    Select(0u0041); Copy() # A
+    Select(0u2200); Paste() # ∀
+    Rotate(180)
+    SetWidth(${width_hankaku})
 
 # ∃ (ベースフォントを置き換え)
     Select(0u018e); Copy() # Ǝ
