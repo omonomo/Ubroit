@@ -4120,7 +4120,7 @@ while (i < \$argc)
 
 # 一旦削除した sups を追加
     Print("Add sups lookups")
-    Select(0u0031) # 1
+    Select(0u00c6) # Æ
     lookups = GetPosSub("*") # フィーチャを取り出す
 
     orig = [0u0250, 0u0251, 0u0252, 0u0254,\
