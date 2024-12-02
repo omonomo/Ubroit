@@ -1457,20 +1457,6 @@ while (i < SizeOf(input_list))
 
     orig = [0u0292] # ʒ
     sups = [0u1dbe] # ᶾ # グリフ作成
-    j = 0
-    while (j < SizeOf(orig))
-        Select(orig[j]); Copy()
-        Select(sups[j]); Paste()
-        Scale(${scale_width_super_sub}, ${scale_height_super_sub}, ${width_latin} / 2, 0)
-        Move(0, ${move_y_super})
-        Scale(${scale_super_sub2}, ${width_latin} / 2, ${move_y_super} + ${center_height_super_sub})
-        SetWidth(${width_hankaku})
- #        glyphName = GlyphInfo("Name") # sups フィーチャ追加 # 後の処理で追加
- #        Select(orig[j])
- #        AddPosSub(lookupSub, glyphName)
-        j += 1
-    endloop
-
  #    orig = [0u0250, 0u0251, 0u0252, 0u0254,\
  #            0u0255, 0u025b, 0u025c, 0u025f,\
  #            0u0261, 0u0265, 0u0268, 0u0269,\
@@ -1480,8 +1466,8 @@ while (i < SizeOf(input_list))
  #            0u0289, 0u028a, 0u028b, 0u028c,\
  #            0u0290, 0u0291, 0u0292, 0u029d,\
  #            0u029f, 0u0266, 0u0279, 0u027b,\
- #            0u0281, 0u0294, 0u0295]
- #            # ɐɑɒɔ ɕɛɜɟ ɡɥɨɩ ɪɭɯɰ ɱɲɳɴ ɵɸʂʃ ʉʊʋʌ ʐʑʒʝ ʟɦɹɻ ʁʔʕ
+ #            0u0281, 0u0294, 0u0295, 0u0263]
+ #            # ɐɑɒɔ ɕɛɜɟ ɡɥɨɩ ɪɭɯɰ ɱɲɳɴ ɵɸʂʃ ʉʊʋʌ ʐʑʒʝ ʟɦɹɻ ʁʔʕɣ
  #    sups = [0u1d44, 0u1d45, 0u1d9b, 0u1d53,\
  #            0u1d9d, 0u1d4b, 0u1d9f, 0u1da1,\
  #            0u1da2, 0u1da3, 0u1da4, 0u1da5,\
@@ -1491,39 +1477,41 @@ while (i < SizeOf(input_list))
  #            0u1db6, 0u1db7, 0u1db9, 0u1dba,\
  #            0u1dbc, 0u1dbd, 0u1dbe, 0u1da8,\
  #            0u1dab, 0u02b1, 0u02b4, 0u02b5,\
- #            0u02b6, 0u02c0, 0u02c1]
- #            # ᵄᵅᶛᵓ ᶝᵋᶟᶡ ᶢᶣᶤᶥ ᶦᶩᵚᶭ ᶬᶮᶯᶰ ᶱᶲᶳᶴ ᶶᶷᶹᶺ ᶼᶽᶾᶨ ᶫʱʴʵ ʶˀˁ # グリフ作成
- #    j = 0
- #    while (j < SizeOf(orig))
- #        Select(orig[j]); Copy()
- #        Select(sups[j]); Paste()
- #        Scale(${scale_width_super_sub}, ${scale_height_super_sub}, ${width_latin} / 2, 0)
- #        Move(0, ${move_y_super})
- #        Scale(${scale_super_sub2}, ${width_latin} / 2, ${move_y_super} + ${center_height_super_sub})
- #        SetWidth(${width_hankaku})
- #        glyphName = GlyphInfo("Name") # sups フィーチャ追加
- #        Select(orig[j])
- #        AddPosSub(lookupSub, glyphName)
- #        j += 1
- #    endloop
+ #            0u02b6, 0u02c0, 0u02c1, 0u02e0]
+ #            # ᵄᵅᶛᵓ ᶝᵋᶟᶡ ᶢᶣᶤᶥ ᶦᶩᵚᶭ ᶬᶮᶯᶰ ᶱᶲᶳᶴ ᶶᶷᶹᶺ ᶼᶽᶾᶨ ᶫʱʴʵ ʶˀˁˠ # グリフ作成
+    j = 0
+    while (j < SizeOf(orig))
+        Select(orig[j]); Copy()
+        Select(sups[j]); Paste()
+        Scale(${scale_width_super_sub}, ${scale_height_super_sub}, ${width_latin} / 2, 0)
+        Move(0, ${move_y_super})
+        Scale(${scale_super_sub2}, ${width_latin} / 2, ${move_y_super} + ${center_height_super_sub})
+        SetWidth(${width_hankaku})
+        glyphName = GlyphInfo("Name") # sups フィーチャ追加
+        Select(orig[j])
+        AddPosSub(lookupSub, glyphName)
+        j += 1
+    endloop
 
+    orig = [0u01ab] # ƫ
+    sups = [0u1db5] # ᶵ # グリフ作成
  #    orig = [0u1d16, 0u1d17, 0u1d1d, 0u1d7b,\
  #            0u1d85, 0u01ab] # ᴖᴗᴝᵻ ᶅƫ
  #    sups = [0u1d54, 0u1d55, 0u1d59, 0u1da7,\
  #            0u1daa, 0u1db5] # ᵔᵕᵙᶧ ᶪᶵ # グリフ作成
- #    j = 0
- #    while (j < SizeOf(orig))
- #        Select(orig[j]); Copy()
- #        Select(sups[j]); Paste()
- #        Scale(${scale_width_super_sub}, ${scale_height_super_sub}, ${width_latin} / 2, 0)
- #        Move(0, ${move_y_super})
- #        Scale(${scale_super_sub2}, ${width_latin} / 2, ${move_y_super} + ${center_height_super_sub})
- #        SetWidth(${width_hankaku})
- #        glyphName = GlyphInfo("Name") # sups フィーチャ追加
- #        Select(orig[j])
- #        AddPosSub(lookupSub, glyphName)
- #        j += 1
- #    endloop
+    j = 0
+    while (j < SizeOf(orig))
+        Select(orig[j]); Copy()
+        Select(sups[j]); Paste()
+        Scale(${scale_width_super_sub}, ${scale_height_super_sub}, ${width_latin} / 2, 0)
+        Move(0, ${move_y_super})
+        Scale(${scale_super_sub2}, ${width_latin} / 2, ${move_y_super} + ${center_height_super_sub})
+        SetWidth(${width_hankaku})
+        glyphName = GlyphInfo("Name") # sups フィーチャ追加
+        Select(orig[j])
+        AddPosSub(lookupSub, glyphName)
+        j += 1
+    endloop
 
     orig = [0u0030, 0u0031, 0u0032, 0u0033,\
             0u0034, 0u0035, 0u0036, 0u0037,\
@@ -1553,7 +1541,7 @@ while (i < SizeOf(input_list))
     Scale(${scale_super_sub2}, ${width_latin} / 2, ${move_y_super} + ${center_height_super_sub})
     SetWidth(${width_hankaku})
 
- #    sups = [0u1d3b, 0u1d46, 0u1d4c, 0u1d4e] # ᴻᵆᵌᵎ # 基本のグリフ無し、上付きのみ
+ #    sups = [0u1d3b, 0u1d46, 0u1d4c, 0u1d4e, 0u02e4] # ᴻᵆᵌᵎˤ # 基本のグリフ無し、上付きのみ
  #    j = 0
  #    while (j < SizeOf(sups))
  #        Select(sups[j])
@@ -4130,10 +4118,10 @@ while (i < \$argc)
             0u0271, 0u0272, 0u0273, 0u0274,\
             0u0275, 0u0278, 0u0282, 0u0283,\
             0u0289, 0u028a, 0u028b, 0u028c,\
-            0u0290, 0u0291, 0u0292, 0u029d,\
+            0u0290, 0u0291, 0u029d,\
             0u029f, 0u0266, 0u0279, 0u027b,\
-            0u0281, 0u0294, 0u0295]
-            # ɐɑɒɔ ɕɛɜɟ ɡɥɨɩ ɪɭɯɰ ɱɲɳɴ ɵɸʂʃ ʉʊʋʌ ʐʑʒʝ ʟɦɹɻ ʁʔʕ
+            0u0281, 0u0294, 0u0295, 0u0263]
+            # ɐɑɒɔ ɕɛɜɟ ɡɥɨɩ ɪɭɯɰ ɱɲɳɴ ɵɸʂʃ ʉʊʋʌ ʐʑʝ ʟɦɹɻ ʁʔʕɣ
     sups = [0u1d44, 0u1d45, 0u1d9b, 0u1d53,\
             0u1d9d, 0u1d4b, 0u1d9f, 0u1da1,\
             0u1da2, 0u1da3, 0u1da4, 0u1da5,\
@@ -4141,10 +4129,32 @@ while (i < \$argc)
             0u1dac, 0u1dae, 0u1daf, 0u1db0,\
             0u1db1, 0u1db2, 0u1db3, 0u1db4,\
             0u1db6, 0u1db7, 0u1db9, 0u1dba,\
-            0u1dbc, 0u1dbd, 0u1dbe, 0u1da8,\
+            0u1dbc, 0u1dbd, 0u1da8,\
             0u1dab, 0u02b1, 0u02b4, 0u02b5,\
-            0u02b6, 0u02c0, 0u02c1]
-            # ᵄᵅᶛᵓ ᶝᵋᶟᶡ ᶢᶣᶤᶥ ᶦᶩᵚᶭ ᶬᶮᶯᶰ ᶱᶲᶳᶴ ᶶᶷᶹᶺ ᶼᶽᶾᶨ ᶫʱʴʵ ʶˀˁ
+            0u02b6, 0u02c0, 0u02c1, 0u02e0]
+            # ᵄᵅᶛᵓ ᶝᵋᶟᶡ ᶢᶣᶤᶥ ᶦᶩᵚᶭ ᶬᶮᶯᶰ ᶱᶲᶳᶴ ᶶᶷᶹᶺ ᶼᶽᶨ ᶫʱʴʵ ʶˀˁˠ # ᶾ は定義済み
+ #    orig = [0u0250, 0u0251, 0u0252, 0u0254,\
+ #            0u0255, 0u025b, 0u025c, 0u025f,\
+ #            0u0261, 0u0265, 0u0268, 0u0269,\
+ #            0u026a, 0u026d, 0u026f, 0u0270,\
+ #            0u0271, 0u0272, 0u0273, 0u0274,\
+ #            0u0275, 0u0278, 0u0282, 0u0283,\
+ #            0u0289, 0u028a, 0u028b, 0u028c,\
+ #            0u0290, 0u0291, 0u0292, 0u029d,\
+ #            0u029f, 0u0266, 0u0279, 0u027b,\
+ #            0u0281, 0u0294, 0u0295, 0u0263]
+ #            # ɐɑɒɔ ɕɛɜɟ ɡɥɨɩ ɪɭɯɰ ɱɲɳɴ ɵɸʂʃ ʉʊʋʌ ʐʑʒʝ ʟɦɹɻ ʁʔʕɣ
+ #    sups = [0u1d44, 0u1d45, 0u1d9b, 0u1d53,\
+ #            0u1d9d, 0u1d4b, 0u1d9f, 0u1da1,\
+ #            0u1da2, 0u1da3, 0u1da4, 0u1da5,\
+ #            0u1da6, 0u1da9, 0u1d5a, 0u1dad,\
+ #            0u1dac, 0u1dae, 0u1daf, 0u1db0,\
+ #            0u1db1, 0u1db2, 0u1db3, 0u1db4,\
+ #            0u1db6, 0u1db7, 0u1db9, 0u1dba,\
+ #            0u1dbc, 0u1dbd, 0u1dbe, 0u1da8,\
+ #            0u1dab, 0u02b1, 0u02b4, 0u02b5,\
+ #            0u02b6, 0u02c0, 0u02c1, 0u02e0]
+ #            # ᵄᵅᶛᵓ ᶝᵋᶟᶡ ᶢᶣᶤᶥ ᶦᶩᵚᶭ ᶬᶮᶯᶰ ᶱᶲᶳᶴ ᶶᶷᶹᶺ ᶼᶽᶾᶨ ᶫʱʴʵ ʶˀˁˠ
     j = 0
     while (j < SizeOf(orig))
         Select(sups[j])
@@ -4252,8 +4262,8 @@ while (i < \$argc)
             0u0289, 0u028a, 0u028b, 0u028c,\
             0u0290, 0u0291, 0u0292, 0u029d,\
             0u029f, 0u0266, 0u0279, 0u027b,\
-            0u0281, 0u0294, 0u0295]
-            # ɐɑɒɔ ɕɛɜɟ ɡɥɨɩ ɪɭɯɰ ɱɲɳɴ ɵɸʂʃ ʉʊʋʌ ʐʑʒʝ ʟɦɹɻ ʁʔʕ
+            0u0281, 0u0294, 0u0295, 0u0263]
+            # ɐɑɒɔ ɕɛɜɟ ɡɥɨɩ ɪɭɯɰ ɱɲɳɴ ɵɸʂʃ ʉʊʋʌ ʐʑʒʝ ʟɦɹɻ ʁʔʕɣ
     supb = [0u1d44, 0u1d45, 0u1d9b, 0u1d53,\
             0u1d9d, 0u1d4b, 0u1d9f, 0u1da1,\
             0u1da2, 0u1da3, 0u1da4, 0u1da5,\
@@ -4263,8 +4273,8 @@ while (i < \$argc)
             0u1db6, 0u1db7, 0u1db9, 0u1dba,\
             0u1dbc, 0u1dbd, 0u1dbe, 0u1da8,\
             0u1dab, 0u02b1, 0u02b4, 0u02b5,\
-            0u02b6, 0u02c0, 0u02c1]
-            # ᵄᵅᶛᵓ ᶝᵋᶟᶡ ᶢᶣᶤᶥ ᶦᶩᵚᶭ ᶬᶮᶯᶰ ᶱᶲᶳᶴ ᶶᶷᶹᶺ ᶼᶽᶾᶨ ᶫʱʴʵ ʶˀˁ
+            0u02b6, 0u02c0, 0u02c1, 0u02e0]
+            # ᵄᵅᶛᵓ ᶝᵋᶟᶡ ᶢᶣᶤᶥ ᶦᶩᵚᶭ ᶬᶮᶯᶰ ᶱᶲᶳᶴ ᶶᶷᶹᶺ ᶼᶽᶾᶨ ᶫʱʴʵ ʶˀˁˠ
     j = 0
     while (j < SizeOf(orig))
         Select(supb[j])
@@ -4274,10 +4284,12 @@ while (i < \$argc)
         j += 1
     endloop
 
-    orig = [0u1d16, 0u1d17, 0u1d1d, 0u1d7b,\
-            0u1d85, 0u01ab] # ᴖᴗᴝᵻ ᶅƫ
-    supb = [0u1d54, 0u1d55, 0u1d59, 0u1da7,\
-            0u1daa, 0u1db5] # ᵔᵕᵙᶧ ᶪᶵ
+    orig = [0u01ab] # ƫ
+    supb = [0u1db5] # ᶵ
+ #    orig = [0u1d16, 0u1d17, 0u1d1d, 0u1d7b,\
+ #            0u1d85, 0u01ab] # ᴖᴗᴝᵻ ᶅƫ
+ #    supb = [0u1d54, 0u1d55, 0u1d59, 0u1da7,\
+ #            0u1daa, 0u1db5] # ᵔᵕᵙᶧ ᶪᶵ
     j = 0
     while (j < SizeOf(orig))
         Select(supb[j])
