@@ -39,13 +39,13 @@ Ubroit (うぶろいと) はコーディングにもお使いいただける日�
 
 ## ダウンロード
 
-最新版 v1.1.0 (2024-12-01)
+最新版 v1.1.1 (2024-12-03)
 
 | リンク                                                                                                      | 説明                                   |
 | ----------------------------------------------------------------------------------------------------------- | -------------------------------------- |
-| [フォント (Ubroit)](https://github.com/omonomo/Ubroit/releases/download/v1.1.0/Ubroit_v1.1.0.zip)           | 通常版。半角幅が全角の1/2。            |
-| [フォント (UbroitLoose)](https://github.com/omonomo/Ubroit/releases/download/v1.1.0/UbroitLoose_v1.1.0.zip) | 文字間隔ゆるい版。半角幅が全角の9/16。 |
-| [ソースコード](https://github.com/omonomo/Ubroit/archive/refs/tags/v1.1.0.zip)                              | 使用方法は下の方にあります。           |
+| [フォント (Ubroit)](https://github.com/omonomo/Ubroit/releases/download/v1.1.1/Ubroit_v1.1.1.zip)           | 通常版。半角幅が全角の1/2。            |
+| [フォント (UbroitLoose)](https://github.com/omonomo/Ubroit/releases/download/v1.1.1/UbroitLoose_v1.1.1.zip) | 文字間隔ゆるい版。半角幅が全角の9/16。 |
+| [ソースコード](https://github.com/omonomo/Ubroit/archive/refs/tags/v1.1.1.zip)                              | 使用方法は下の方にあります。           |
 
 フォントやスクリプトの使用は自己責任にてお願いいたします。  
 各ファイルを使用することで生じた不具合・損害等について omonomo は責任を負いません。  
@@ -137,7 +137,7 @@ Ubroit は以下の環境でビルドできることを確認しています。
 - OS: macOS Sequoia (version 15.1.1)
 - Shell: GNU bash, version 5.2.37(1)-release (aarch64-apple-darwin23.4.0)
 - FontForge: 20230101
-- FontTools: 4.55.0
+- FontTools: 4.55.1
 
 ### 基本的な使い方
 
