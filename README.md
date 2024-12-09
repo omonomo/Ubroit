@@ -39,13 +39,13 @@ Ubroit (うぶろいと) はコーディングにもお使いいただける日�
 
 ## ダウンロード
 
-最新版 v1.1.1 (2024-12-03)
+最新版 v1.1.2 (2024-12-09)
 
 | リンク                                                                                                      | 説明                                   |
 | ----------------------------------------------------------------------------------------------------------- | -------------------------------------- |
-| [フォント (Ubroit)](https://github.com/omonomo/Ubroit/releases/download/v1.1.1/Ubroit_v1.1.1.zip)           | 通常版。半角幅が全角の1/2。            |
-| [フォント (UbroitLoose)](https://github.com/omonomo/Ubroit/releases/download/v1.1.1/UbroitLoose_v1.1.1.zip) | 文字間隔ゆるい版。半角幅が全角の9/16。 |
-| [ソースコード](https://github.com/omonomo/Ubroit/archive/refs/tags/v1.1.1.zip)                              | 使用方法は下の方にあります。           |
+| [フォント (Ubroit)](https://github.com/omonomo/Ubroit/releases/download/v1.1.2/Ubroit_v1.1.2.zip)           | 通常版。半角幅が全角の1/2。            |
+| [フォント (UbroitLoose)](https://github.com/omonomo/Ubroit/releases/download/v1.1.2/UbroitLoose_v1.1.2.zip) | 文字間隔ゆるい版。半角幅が全角の9/16。 |
+| [ソースコード](https://github.com/omonomo/Ubroit/archive/refs/tags/v1.1.2.zip)                              | 使用方法は下の方にあります。           |
 
 フォントやスクリプトの使用は自己責任にてお願いいたします。  
 各ファイルを使用することで生じた不具合・損害等について omonomo は責任を負いません。  
@@ -65,7 +65,7 @@ Ubroit (うぶろいと) はコーディングにもお使いいただける日�
 ### ラテン文字について
 
 - Cyroit のグリフに合わせるため全体的に拡大、少し縦長になっています。
-- 一部の文字や記号について、グリフの形状や表示座標を微調整しています。
+- 一部の文字や記号について、グリフ形状の改変や表示座標の微調整を行っています。
 - オブリーク体は新規に生成し直しています。
 
 ### 仮名文字について
@@ -137,7 +137,7 @@ Ubroit は以下の環境でビルドできることを確認しています。
 - OS: macOS Sequoia (version 15.1.1)
 - Shell: GNU bash, version 5.2.37(1)-release (aarch64-apple-darwin23.4.0)
 - FontForge: 20230101
-- FontTools: 4.55.1
+- FontTools: 4.55.2
 
 ### 基本的な使い方
 
