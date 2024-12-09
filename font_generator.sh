@@ -820,6 +820,32 @@ while (i < SizeOf(input_list))
     RemoveOverlap()
     Select(65552);  Clear() # Temporary glyph
 
+# G (右下端を折り曲げる)
+    Select(0u00af); Copy()  # macron
+    Select(65552);  Paste() # Temporary glyph
+    Scale(50, 110); Copy()
+    Select(0u0047) # G
+    SelectMore(0u011c) # Ĝ
+    SelectMore(0u011e) # Ğ
+    SelectMore(0u0120) # Ġ
+    SelectMore(0u0122) # Ģ
+    SelectMore(0u0193) # Ɠ
+ #    SelectMore(0u01e4) # Ǥ
+    SelectMore(0u01e6) # Ǧ
+    SelectMore(0u01f4) # Ǵ
+ #    SelectMore(0u1e20) # Ḡ
+ #    SelectMore(0ua7a0) # Ꞡ
+    if (input_list[i] == "${input_latin_regular}")
+        PasteWithOffset(145, -341 + 18)
+        PasteWithOffset(115, -341 + 18)
+    else
+        PasteWithOffset(140, -336)
+        PasteWithOffset(85, -336)
+    endif
+    SetWidth(${width_hankaku})
+    RemoveOverlap()
+    Select(65552);  Clear() # Temporary glyph
+
 # P (右に移動)
     # ラテン文字
     Select(0u0050) # P
