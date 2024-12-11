@@ -1021,6 +1021,7 @@ while (i < SizeOf(input_list))
     RemoveOverlap()
     Simplify()  
     SetWidth(${width_hankaku})
+    Select(65552); Clear() # Temporary glyph
 
  #    Select(0u0271) # ɱ
  #    Select(0u1d6f) # ᵯ
@@ -1788,6 +1789,7 @@ while (i < SizeOf(input_list))
     Select(0u2025, 0u2026); Clear() # ‥…
     Select(0u2030, 0u2031); Clear() # ‰‱
     Select(0u2150, 0u215f); Clear() # ⅐-⅟
+    Select(0u2189); Clear() # ↉
     Select(0u2190, 0u2199); Clear() # ←-↙
     Select(0u21a4, 0u21a8); Clear() # ↤-↨
     Select(0u21a9, 0u21aa); Clear() # ↩↪
