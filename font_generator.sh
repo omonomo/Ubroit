@@ -5161,7 +5161,7 @@ while (i < \$argc)
         SelectMore(0u23f1, 0u23f2) # ⏱⏲
         SelectMore(0u23f3)         # ⏳
         SelectMore(0u23f8, 0u23fa) # ⏸⏹⏺
-        SelectMore(0u24c2)         # Ⓜ
+ #        SelectMore(0u24c2)         # Ⓜ
         SelectMore(0u25aa, 0u25ab) # ▪▫
         SelectMore(0u25b6)         # ▶
         SelectMore(0u25c0)         # ◀
