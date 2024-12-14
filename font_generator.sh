@@ -189,7 +189,7 @@ move_x_calt_symbol="32" # 記号のカーニングX座標移動量
 move_x_hankaku="0" # 半角文字移動量
 
 # Loose 版用
-scale_width_latin_loose="104" # Latin フォントの半角英数文字の横拡大率 (Loose 版)
+scale_width_latin_loose="107" # Latin フォントの半角英数文字の横拡大率 (Loose 版)
 scale_height_latin_loose="107" # Latin フォントの半角英数文字の縦拡大率 (Loose 版)
 move_x_hankaku_latin_loose="33" # Latin フォント全体のX座標移動量 (Loose 版)
 scale_width_hankaku_loose="100" # 半角英数文字の横拡大率 (Loose 版)
