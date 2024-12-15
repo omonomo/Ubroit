@@ -1065,9 +1065,24 @@ while (i < SizeOf(input_list))
     Move(0, -170)
     SetWidth(${width_hankaku})
 
+# - (横を延ばす)
+    Select(0u002d) # -
+    if (input_list[i] == "${input_latin_regular}")
+        Scale(150, 100)
+    else
+        Scale(125, 100)
+    endif
+    SetWidth(${width_hankaku})
+
 # _ (上げる)
     Select(0u005f) # _
     Move(0, 78)
+    SetWidth(${width_hankaku})
+
+# \`´ (拡大する)
+    Select(0u0060) # \`
+    SelectMore(0u00b4) # ´
+    Scale(130, 130,  ${width_latin} / 2, 620)
     SetWidth(${width_hankaku})
 
 # ə (ベースフォントを置き換え)
