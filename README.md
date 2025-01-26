@@ -41,13 +41,13 @@ Ubroit (うぶろいと) はコーディングにもお使いいただける日�
 
 ## ダウンロード
 
-最新版 v1.1.3 (2024-12-15)
+最新版 v1.2.0 (2025-01-26)
 
 | リンク                                                                                                      | 説明                                   |
 | ----------------------------------------------------------------------------------------------------------- | -------------------------------------- |
-| [フォント (Ubroit)](https://github.com/omonomo/Ubroit/releases/download/v1.1.3/Ubroit_v1.1.3.zip)           | 通常版。半角幅が全角の1/2。            |
-| [フォント (UbroitLoose)](https://github.com/omonomo/Ubroit/releases/download/v1.1.3/UbroitLoose_v1.1.3.zip) | 文字間隔ゆるい版。半角幅が全角の9/16。 |
-| [ソースコード](https://github.com/omonomo/Ubroit/archive/refs/tags/v1.1.3.zip)                              | 使用方法は下の方にあります。           |
+| [フォント (Ubroit)](https://github.com/omonomo/Ubroit/releases/download/v1.2.0/Ubroit_v1.2.0.zip)           | 通常版。半角幅が全角の1/2。            |
+| [フォント (UbroitLoose)](https://github.com/omonomo/Ubroit/releases/download/v1.2.0/UbroitLoose_v1.2.0.zip) | 文字間隔ゆるい版。半角幅が全角の9/16。 |
+| [ソースコード](https://github.com/omonomo/Ubroit/archive/refs/tags/v1.2.0.zip)                              | 使用方法は下の方にあります。           |
 
 フォントやスクリプトの使用は自己責任にてお願いいたします。  
 各ファイルを使用することで生じた不具合・損害等について omonomo は責任を負いません。  
@@ -122,30 +122,31 @@ Loose 版は名称が 「UbroitLoose...」 になります。
 
 | 名称      | サンプル                                                 | 説明                                                                                                                    |
 | --------- | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| Ubroit    | <img alt="Normal" src="./images/Normal.png" width="260"> | 通常版。スタイルセット対応。<br> 内容については後述。                                                                   |
-| Ubroit EH | <img alt="Normal" src="./images/EH.png" width="260">     | 絵文字減らした版。スタイルセット対応。別の絵文字フォントとの併用推奨。<br>(サンプルの㊙は Apple Color Emoji のものです) |
-| Ubroit BS | <img alt="BS" src="./images/BS.png" width="260">         | 基本版。<br> 全角スペースを可視化しています。                                                                           |
-| Ubroit SP | <img alt="SP" src="./images/SP.png" width="260">         | スペシャルスペース版。<br> 半角スペース、ノーブレークスペースも可視化したバージョン。                                   |
-| Ubroit DG | <img alt="DG" src="./images/DG.png" width="260">         | 桁区切り表示版。<br> たくさん並んだ数字とにらめっこする時間を短縮できます。                                             |
-| Ubroit FX | <img alt="TS" src="./images/FX.png" width="260">         | 文字間隔固定版。calt と相性が悪いソフト用。<br> また他のバージョンよりも軽快に動作します。                              |
-| Ubroit HB | <img alt="HB" src="./images/HB.png" width="260">         | 平凡版。全てのスペースが不可視でグリフ改変も抑えたバージョン。<br> プリントアウト用にどうぞ。                           |
+| Ubroit    | <img alt="Normal" src="./images/Normal.png" width="268"> | 通常版。スタイルセット対応。<br> 内容については後述。                                                                   |
+| Ubroit EH | <img alt="Normal" src="./images/EH.png" width="268">     | 絵文字減らした版。スタイルセット対応。別の絵文字フォントとの併用推奨。<br>(サンプルの㊙は Apple Color Emoji のものです) |
+| Ubroit BS | <img alt="BS" src="./images/BS.png" width="268">         | 基本版。<br> 全角スペースを可視化しています。                                                                           |
+| Ubroit SP | <img alt="SP" src="./images/SP.png" width="268">         | スペシャルスペース版。<br> 半角スペース、ノーブレークスペースも可視化したバージョン。                                   |
+| Ubroit DG | <img alt="DG" src="./images/DG.png" width="268">         | 桁区切り表示版。<br> たくさん並んだ数字とにらめっこする時間を短縮できます。                                             |
+| Ubroit FX | <img alt="TS" src="./images/FX.png" width="268">         | 文字間隔固定版。calt と相性が悪いソフト用。<br> また他のバージョンよりも軽快に動作します。                              |
+| Ubroit HB | <img alt="HB" src="./images/HB.png" width="268">         | 平凡版。全てのスペースが不可視でグリフ改変も抑えたバージョン。<br> プリントアウト用にどうぞ。                           |
 
 ### 通常版、絵文字減らした版のスタイルセットについて
 
 設定方法については、[Fira Code の説明](https://github.com/tonsky/FiraCode/wiki/How-to-enable-stylistic-sets)が分かりやすいと思います。
 
-| タグ名 | サンプル                                             | 内容                                                                                    |
-| ------ | ---------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| ss01   | <img alt="ss01" src="./images/ss01.png" width="260"> | 全角スペース可視化                                                                      |
-| ss02   | <img alt="ss02" src="./images/ss02.png" width="260"> | 半角スペース可視化                                                                      |
-| ss03   | <img alt="ss03" src="./images/ss03.png" width="260"> | 3桁区切りマーク表示                                                                     |
-| ss04   | <img alt="ss04" src="./images/ss04.png" width="260"> | 4桁区切りマーク表示                                                                     |
-| ss05   | <img alt="ss05" src="./images/ss05.png" width="260"> | 小数小文字化                                                                            |
-| ss06   | <img alt="ss06" src="./images/ss06.png" width="260"> | 全角・半角形の下線、点字の外枠消去                                                      |
-| ss07   | <img alt="ss07" src="./images/ss07.png" width="260"> | 識別性向上グリフ無効                                                                    |
-| ss08   | <img alt="ss08" src="./images/ss08.png" width="260"> | DQVZ のグリフ変更                                                                       |
-| ss09   | <img alt="ss09" src="./images/ss09.png" width="260"> | JIS に含まれる罫線を全角化、矢印を細線化<br> (環境によって全角にならないことがあります) |
-| ss10   | <img alt="ss10" src="./images/ss10.png" width="260"> | 0のドット消去                                                                           |
+| タグ名 | サンプル                                             | 内容                                                                                      |
+| ------ | ---------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| ss01   | <img alt="ss01" src="./images/ss01.png" width="268"> | 全角スペース可視化                                                                        |
+| ss02   | <img alt="ss02" src="./images/ss02.png" width="268"> | 半角スペース可視化                                                                        |
+| ss03   | <img alt="ss03" src="./images/ss03.png" width="268"> | 3桁区切りマーク表示                                                                       |
+| ss04   | <img alt="ss04" src="./images/ss04.png" width="268"> | 4桁区切りマーク表示                                                                       |
+| ss05   | <img alt="ss05" src="./images/ss05.png" width="268"> | 小数小文字化                                                                              |
+| ss06   | <img alt="ss06" src="./images/ss06.png" width="268"> | 全角・半角形の下線、点字の外枠消去                                                        |
+| ss07   | <img alt="ss07" src="./images/ss07.png" width="268"> | 識別性向上グリフ無効                                                                      |
+| ss08   | <img alt="ss08" src="./images/ss08.png" width="268"> | DQVZ のグリフ変更                                                                         |
+| ss09   | <img alt="ss09" src="./images/ss09.png" width="268"> | JIS に含まれる罫線を全角化、矢印を細線化<br> (環境によって全角にならないことがあります)   |
+| ss10   | <img alt="ss10" src="./images/ss10.png" width="268"> | 0のドット消去                                                                             |
+| ss11   | <img alt="ss11" src="./images/ss11.png" width="268"> | ss01、ss02で表示される以外のスペース可視化<br> (環境によって可視化されないことがあります) |
 
 ## ライセンス
 
@@ -163,7 +164,7 @@ Ubroit は以下の環境でビルドできることを確認しています。
 - OS: macOS Sequoia (version 15.2)
 - Shell: GNU bash, version 5.2.37(1)-release (aarch64-apple-darwin23.4.0)
 - FontForge: 20230101
-- FontTools: 4.55.3
+- FontTools: 4.55.5
 
 ### 基本的な使い方
 
@@ -337,7 +338,6 @@ calt テーブル (前後の文字によってグリフ置換を行う設定) �
 - [GitHubページ](https://github.com/omonomo/Ubroit): 過去のバージョンや更新履歴はこちらをご参照ください。
 - [全角英数や半角カナが判別しやすい、文字間隔調整機能付き等幅フォント「Cyroit」](https://omonomo.github.io/Cyroit/): Ubroit の一番上のお姉さんフォントです。
 - [全角英数や半角カナが判別しやすい、文字間隔調整機能付き等幅フォント「Meroit」](https://omonomo.github.io/Meroit/): 二つ上のお姉さんフォントです。
-- [全角英数や半角カナが判別しやすい、文字間隔調整機能付き等幅フォント「Jeroit」](https://omonomo.github.io/Jeroit/): Ubroit の双子のお姉さんフォントです。
-- [全角英数や半角カナが判別しやすい、文字間隔調整機能付き等幅フォント「Soroit」](https://omonomo.github.io/Soroit/): 末っ子の妹さんフォントです。
-- [小指の移動量が少ない日本語かな入力配列 「水草配列」](https://omonomo.github.io/Mizukusa/): オリジナル日本語かな入力配列を紹介しています。
-- [DefaultKeyBinding.dict サンプル](https://omonomo.github.io/DefaultKeyBinding/): タイトル通りです。
+- [全角英数や半角カナが判別しやすい、文字間隔調整機能付き等幅フォント「Jeroit」](https://omonomo.github.io/Jeroit/): 双子のお姉さんフォントです。
+- [全角英数や半角カナが判別しやすい、文字間隔調整機能付き等幅フォント「Soroit」](https://omonomo.github.io/Soroit/): 一つ下の妹さんフォントです。
+- [全角英数や半角カナが判別しやすい、文字間隔調整機能付き等幅フォント「Roroit」](https://omonomo.github.io/Roroit/): 末っ子の妹さんフォントです。
