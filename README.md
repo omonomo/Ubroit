@@ -41,13 +41,13 @@ Ubroit (うぶろいと) はコーディングにもお使いいただける日�
 
 ## ダウンロード
 
-最新版 v1.2.0 (2025-01-26)
+最新版 v1.2.1 (2025-02-03)
 
 | リンク                                                                                                      | 説明                                   |
 | ----------------------------------------------------------------------------------------------------------- | -------------------------------------- |
-| [フォント (Ubroit)](https://github.com/omonomo/Ubroit/releases/download/v1.2.0/Ubroit_v1.2.0.zip)           | 通常版。半角幅が全角の1/2。            |
-| [フォント (UbroitLoose)](https://github.com/omonomo/Ubroit/releases/download/v1.2.0/UbroitLoose_v1.2.0.zip) | 文字間隔ゆるい版。半角幅が全角の9/16。 |
-| [ソースコード](https://github.com/omonomo/Ubroit/archive/refs/tags/v1.2.0.zip)                              | 使用方法は下の方にあります。           |
+| [フォント (Ubroit)](https://github.com/omonomo/Ubroit/releases/download/v1.2.1/Ubroit_v1.2.1.zip)           | 通常版。半角幅が全角の1/2。            |
+| [フォント (UbroitLoose)](https://github.com/omonomo/Ubroit/releases/download/v1.2.1/UbroitLoose_v1.2.1.zip) | 文字間隔ゆるい版。半角幅が全角の9/16。 |
+| [ソースコード](https://github.com/omonomo/Ubroit/archive/refs/tags/v1.2.1.zip)                              | 使用方法は下の方にあります。           |
 
 フォントやスクリプトの使用は自己責任にてお願いいたします。  
 各ファイルを使用することで生じた不具合・損害等について omonomo は責任を負いません。  
@@ -161,10 +161,10 @@ Loose 版は名称が 「UbroitLoose...」 になります。
 
 Ubroit は以下の環境でビルドできることを確認しています。
 
-- OS: macOS Sequoia (version 15.2)
+- OS: macOS Sequoia (version 15.3)
 - Shell: GNU bash, version 5.2.37(1)-release (aarch64-apple-darwin23.4.0)
 - FontForge: 20230101
-- FontTools: 4.55.5
+- FontTools: 4.55.8
 
 ### 基本的な使い方
 
@@ -187,7 +187,7 @@ Cyroit の生成スクリプトと使い方は同じです。
 
 一連の処理を自動化します。全スクリプトの中のリーダーです。  
 `-F` オプションを付けずに生成したフォントは、表示確認用の未完成品になります。  
-パラメータとして引数に font_generator のオプション (`hVxfNn` 以外) をハイフン無しで羅列することにより、生成フォントをカスタマイズすることができます。
+パラメータとして引数に font_generator のオプション (`hVxXfNn` 以外) をハイフン無しで羅列することにより、生成フォントをカスタマイズすることができます。
 
 (例) 接尾語に「NoNF」を付けて、Nerd Fonts 抜きの基本版 (完成品) を生成する場合
 
@@ -236,6 +236,7 @@ FontForge のスクリプト機能を利用してフォントの合成とグリ�
   `-h` ヘルプを表示します。  
   `-V` 生成するフォントのバージョンナンバーを表示します。`settings.txt` の内容を参照します。  
   `-x` スクリプトと同じフォルダにある一時作成フォルダとファイルの削除のみ行って終了します。  
+  `-X` スクリプトと同じフォルダにある一時作成フォルダ、ファイルと保存してある機能削除前のフォントの削除のみ行って終了します。  
   `-f /path/to/fontforge` _/path/to/fontforge_ に存在する FontForge を使用します。  
   `-v` 合成時の経過を詳しく表示します。  
   `-l` 一時作成ファイルを残したままにします。  
