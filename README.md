@@ -150,8 +150,8 @@ Loose 版は名称が 「UbroitLoose...」 になります。
 
 ## ライセンス
 
-- フォント : [SIL Open Font License 1.1](build/OFL.txt)
-- スクリプト : [MIT](./LICENSE.txt)
+- フォント : [SIL Open Font License 1.1](https://github.com/omonomo/Ubroit/blob/main/build/Ubroit/OFL.txt)
+- スクリプト : [The MIT License](https://github.com/omonomo/Ubroit/blob/main/LICENSE.txt)
 
 素材元のフォントやスクリプトはライセンスが異なる場合があります。
 
@@ -336,7 +336,7 @@ calt テーブル (前後の文字によってグリフ置換を行う設定) �
 
 ## リンク
 
-- [GitHubページ](https://github.com/omonomo/Ubroit): 過去のバージョンや更新履歴はこちらをご参照ください。
+- [GitHub リリースページ](https://github.com/omonomo/Ubroit/releases): 過去のバージョンや更新履歴はこちらをご参照ください。
 - [全角英数や半角カナが判別しやすい、文字間隔調整機能付き等幅フォント「Cyroit」](https://omonomo.github.io/Cyroit/): Ubroit の一番上のお姉さんフォントです。
 - [全角英数や半角カナが判別しやすい、文字間隔調整機能付き等幅フォント「Meroit」](https://omonomo.github.io/Meroit/): 二つ上のお姉さんフォントです。
 - [全角英数や半角カナが判別しやすい、文字間隔調整機能付き等幅フォント「Jeroit」](https://omonomo.github.io/Jeroit/): 双子のお姉さんフォントです。
