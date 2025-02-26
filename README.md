@@ -337,8 +337,10 @@ calt テーブル (前後の文字によってグリフ置換を行う設定) �
 ## リンク
 
 - [GitHub リリースページ](https://github.com/omonomo/Ubroit/releases): 過去のバージョンや更新履歴はこちらをご参照ください。
-- [全角英数や半角カナが判別しやすい、文字間隔調整機能付き等幅フォント「Cyroit」](https://omonomo.github.io/Cyroit/): Ubroit の一番上のお姉さんフォントです。
-- [全角英数や半角カナが判別しやすい、文字間隔調整機能付き等幅フォント「Meroit」](https://omonomo.github.io/Meroit/): 二つ上のお姉さんフォントです。
-- [全角英数や半角カナが判別しやすい、文字間隔調整機能付き等幅フォント「Jeroit」](https://omonomo.github.io/Jeroit/): 双子のお姉さんフォントです。
+- [全角英数や半角カナが判別しやすい、文字間隔調整機能付き等幅フォント「Cyroit」](https://omonomo.github.io/Cyroit/): 一番上のお姉さんフォントです。
+- [全角英数や半角カナが判別しやすい、文字間隔調整機能付き等幅フォント「Meroit」](https://omonomo.github.io/Meroit/): 二番目のお姉さんフォントです。
+- [全角英数や半角カナが判別しやすい、文字間隔調整機能付き等幅フォント「Jeroit」](https://omonomo.github.io/Jeroit/): 一つ上のお姉さんフォントです。
 - [全角英数や半角カナが判別しやすい、文字間隔調整機能付き等幅フォント「Soroit」](https://omonomo.github.io/Soroit/): 一つ下の妹さんフォントです。
-- [全角英数や半角カナが判別しやすい、文字間隔調整機能付き等幅フォント「Roroit」](https://omonomo.github.io/Roroit/): 末っ子の妹さんフォントです。
+- [全角英数や半角カナが判別しやすい、文字間隔調整機能付き等幅フォント「Roroit」](https://omonomo.github.io/Roroit/): 六番目の妹さんフォントです。
+- [全角英数や半角カナが判別しやすい、文字間隔調整機能付き等幅フォント「Viroit」](https://omonomo.github.io/Viroit/): 七番目の妹さんフォントです。
+- [全角英数や半角カナが判別しやすい、文字間隔調整機能付き等幅フォント「Idroit」](https://omonomo.github.io/Idroit/): 末っ子の妹さんフォントです。
