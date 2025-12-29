@@ -58,7 +58,7 @@ Copyright 2011 Canonical Ltd.
 [Inconsolata (Version 3.001)]  
 Copyright 2006 The Inconsolata Project Authors  
 ([https://levien.com/type/myfonts/inconsolata.html](https://levien.com/type/myfonts/inconsolata.html))  
-主に Ubuntu Mono に含まれない文字で使用しています。Inconsolata のライセンスは [SIL Open Font License v1.1](https://github.com/google/fonts/blob/main/ofl/inconsolata/OFL.txt) です。
+主に Ubuntu Mono に含まれない文字の補完で使用しています。Inconsolata のライセンスは [SIL Open Font License v1.1](https://github.com/google/fonts/blob/main/ofl/inconsolata/OFL.txt) です。
 
 [Circle M+ (Version 1.063a)]  
 Copyright(c) 2020 M+ FONTS PROJECT, itouhiro  
