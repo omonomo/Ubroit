@@ -39,11 +39,11 @@ address_store_b_diagram=$((address_store_g + 1)) # 保管した▲▼■アド�
 address_store_underline=$((address_store_b_diagram + 3)) # 保管した下線アドレス
 address_store_mod=$((address_store_underline + 3)) # 保管したDQVZアドレス
 address_store_braille=$((address_store_mod + num_mod_glyphs * 6)) # 保管した点字アドレス
-address_store_zero=$((address_store_braille + 256)) # 保管したスラッシュ無し0アドレス
-address_store_visi_latin=$((address_store_zero + 6)) # latinフォントの保管した識別性向上アドレス ⁄|
+address_store_zero=$((address_store_braille + 256)) # 保管したドット無し0・スラッシュ0アドレス
+address_store_visi_latin=$((address_store_zero + 12)) # latinフォントの保管した識別性向上アドレス ⁄|
 address_store_visi_kana=$((address_store_visi_latin + 2)) # 仮名フォントの保管した識別性向上アドレス ゠ - ➓
-address_store_visi_kanzi=$((address_store_visi_kana + 26)) # 漢字フォントの保管した識別性向上アドレス 〇 - 口
-address_store_line=$((address_store_visi_kanzi + 9)) # 保管した罫線アドレス
+address_store_visi_kanzi=$((address_store_visi_kana + 25)) # 漢字フォントの保管した識別性向上アドレス 〇 - 口
+address_store_line=$((address_store_visi_kanzi + 12)) # 保管した罫線アドレス
 address_store_arrow=$((address_store_line + 32)) # 保管した矢印アドレス
 address_store_vert=$((address_store_arrow + 4)) # 保管した縦書きアドレス(縦書きの縦線無し（ - 縦書きの縦線無し⁉)
 address_store_zenhan=$((address_store_vert + 109)) # 保管した全角半角アドレス(！゠⁉)
@@ -57,7 +57,7 @@ address_vert_start="1114181" # 合成後のvert置換の先頭アドレス
 address_vert_bracket=${address_vert_start} # vert置換アドレス （
 address_vert_X=$((address_vert_bracket + 109)) # vert置換アドレス ✂
 address_vert_dh=$((address_vert_X + 3)) # vert置換アドレス ゠
-address_vert_mm=$((address_vert_dh + 27)) # vert置換アドレス ㍉
+address_vert_mm=$((address_vert_dh + 75)) # vert置換アドレス ㍉
 address_vert_kabu=$((address_vert_mm + 333)) # vert置換アドレス ㍿
 address_vert_end=$((address_vert_kabu + 7 - 1)) # vert置換の最終アドレス ㋿
 
@@ -69,7 +69,7 @@ address_calt_barD=$((address_calt_figure + 40)) # calt置換アドレス(下に�
 address_calt_hyphenL=$((address_calt_barD + 9)) # calt置換アドレス(左に移動した *、数を変更した場合スロットの確保数を変更すること)
 address_calt_hyphenR=$((address_calt_hyphenL + 30)) # calt置換アドレス(右に移動した *)
 address_calt_escape=$((address_calt_hyphenR + 30)) # calt置換アドレス (エスケープ文字)
-address_calt_end=$((address_calt_escape + 3 - 1)) # calt置換の最終アドレス (右上に移動した :)
+address_calt_end=$((address_calt_escape + 3 - 1)) # calt置換の最終アドレス (右に移動した 2つ並んだ時用のバックスラッシュ)
 address_calt_barDLR="24" # calt置換アドレス(左右に移動した * から、左右に移動した | までの増分)
 
 address_ss_start=$((address_calt_end + 1)) # ss置換の先頭アドレス
@@ -77,17 +77,18 @@ address_ss_space=${address_ss_start} # ss置換アドレス(全角スペース)
 address_ss_figure=$((address_ss_space + 3)) # ss置換アドレス(桁区切り付きの数字)
 address_ss_vert=$((address_ss_figure + 50)) # ss置換の縦書き全角アドレス(縦書きの（)
 address_ss_zenhan=$((address_ss_vert + 109)) # ss置換の横書き全角半角アドレス(！)
-address_ss_braille=$((address_ss_zenhan + 172)) # ss置換の点字アドレス
+address_ss_braille=$((address_ss_zenhan + 172)) # ss置換の点字アドレス(点なし)
 address_ss_visibility=$((address_ss_braille + 256)) # ss置換の識別性向上アドレス(/)
-address_ss_mod=$((address_ss_visibility + 46)) # ss置換のDQVZアドレス
-address_ss_line=$((address_ss_mod + num_mod_glyphs * 6)) # ss置換の罫線アドレス
-address_ss_arrow=$((address_ss_line + 32)) # ss置換の矢印アドレス
+address_ss_liga=$((address_ss_visibility + 48)) # ss置換の識別性向上リガチャアドレス(フォントによってはダミースペース)
+address_ss_mod=$((address_ss_liga + 2)) # ss置換のDQVZアドレス(ストローク D)
+address_ss_line=$((address_ss_mod + num_mod_glyphs * 6)) # ss置換の罫線アドレス(全角─)
+address_ss_arrow=$((address_ss_line + 32)) # ss置換の矢印アドレス(←)
 address_ss_zero=$((address_ss_arrow + 4)) # ss置換のスラッシュ無し0アドレス
 address_ss_otherspace=$((address_ss_zero + 10)) # ss置換のその他のスペースアドレス
-address_ss_liga=$((address_ss_otherspace + 2)) # ss置換のリガチャアドレス
-address_ss_ambiguous=$((address_ss_liga + 2)) # ss置換のあいまい文字アドレス
-address_ss_escape=$((address_ss_ambiguous + 115)) # ss置換のエスケープ文字アドレス
-address_ss_end=$((address_ss_escape + 3 - 1)) # ss置換の最終アドレス
+address_ss_ambiguous=$((address_ss_otherspace + 2)) # ss置換のあいまい文字アドレス(半角‥)
+address_ss_escape=$((address_ss_ambiguous + 116)) # ss置換のエスケープ文字アドレス(細いバックスラッシュ)
+address_ss_zero2=$((address_ss_escape + 3)) # ss置換のドット0アドレス
+address_ss_end=$((address_ss_zero2 + 10 - 1)) # ss置換の最終アドレス
 num_ss_glyphs_former=$((address_ss_braille - address_ss_start)) # ss置換のグリフ数(点字の前まで)
 num_ss_glyphs_latter=$((address_ss_end + 1 - address_ss_braille)) # ss置換のグリフ数(点字から後)
 num_ss_glyphs=$((address_ss_end + 1 - address_ss_start)) # ss置換の総グリフ数
@@ -99,7 +100,7 @@ lookupIndex_replace=$((lookupIndex_calt + num_calt_lookups)) # 単純置換のlo
 num_replace_lookups="12" # 単純置換のルックアップ数 (lookupの数を変えた場合はcalt_table_makerも変更すること)
 
 lookupIndex_ss=$((lookupIndex_replace + num_replace_lookups)) # ssテーブルのlookupナンバー
-num_ss_lookups="13" # ssのルックアップ数 (lookupの数を変えた場合はtable_modificatorも変更すること)
+num_ss_lookups="14" # ssのルックアップ数 (lookupの数を変えた場合はtable_modificatorも変更すること)
 
 # 著作権
 copyright="Copyright (c) 2024 omonomo\n\n"
@@ -290,7 +291,7 @@ calt_flag="true" # calt対応
 ss_flag="false" # ss対応
 nerd_flag="true" # Nerd fonts 追加
 separator_flag="true" # 桁区切りあり
-slashed_zero_flag="true" # 0にスラッシュあり
+zero_mode="1" # 0の形状(0: スラッシュ・ドット無し、1: 標準 2: 別バージョン)
 oblique_flag="true" # オブリーク作成
 emoji_flag="true" # 絵文字を減らさない
 draft_flag="false" # 下書きモード
@@ -432,8 +433,9 @@ font_generator_help()
     echo "  -u                     Disable zenkaku hankaku underline"
     echo "  -b                     Disable glyphs with improved visibility"
     echo "  -t                     Disable modified D,Q,V and Z"
-    echo "  -O                     Disable slashed zero"
     echo "  -s                     Disable thousands separator"
+    echo "  -O                     Disable doted zero"
+    echo "  -Q                     Enable another zero"
     echo "  -c                     Disable calt feature"
     echo "  -e                     Disable add Nerd fonts"
     echo "  -o                     Disable generate oblique style fonts"
@@ -445,7 +447,7 @@ font_generator_help()
 }
 
 # Get options
-while getopts hVxXf:vlN:n:waZzubtOsceojSdPp OPT
+while getopts hVxXf:vlN:n:waZzubtsOQceojSdPp OPT
 do
     case "${OPT}" in
         "h" )
@@ -537,13 +539,25 @@ do
             echo "Option: Disable modified D,Q,V and Z"
             mod_flag="false"
             ;;
-        "O" )
-            echo "Option: Disable slashed zero"
-            slashed_zero_flag="false"
-            ;;
         "s" )
             echo "Option: Disable thousands separator"
             separator_flag="false"
+            ;;
+        "O" )
+            echo "Option: Disable slashed zero"
+            if [ "${ss_flag}" = "true" ]; then
+                echo "Can't be disabled"
+            else
+                zero_mode="0"
+            fi
+            ;;
+        "Q" )
+            echo "Option: Enable another zero"
+            if [ "${ss_flag}" = "true" ]; then
+                echo "Can't be enabled"
+            else
+                zero_mode="2"
+            fi
             ;;
         "c" )
             echo "Option: Disable calt feature"
@@ -570,10 +584,10 @@ do
             visible_zenkaku_space_flag="false"
             visible_hankaku_space_flag="false"
             underline_flag="true"
-            improve_visibility_flag="true"
  #            underline_flag="false" # デフォルトで下線無しにする場合
+            improve_visibility_flag="true"
             mod_flag="false"
-            slashed_zero_flag="true"
+            zero_mode="1"
             calt_flag="true"
             separator_flag="false"
             ss_flag="true"
@@ -1259,9 +1273,8 @@ while (i < SizeOf(input_list))
     Paste()
     SetWidth(${width_latin})
 
+    Print("Edit zero")
 # ドット無し0を作成
-    Print("Edit doted zero")
-
     # 通常 (上付き、下付きは後で加工)
     Select(0u0030); Copy() # 0
     Select(${address_store_zero}); Paste() # 保管所
@@ -1279,6 +1292,30 @@ while (i < SizeOf(input_list))
     Select(${address_store_zero} + 3); Paste() # 下線無し全角
     Select(${address_store_zero} + 4); Paste() # 下線付き全角横書き
     Select(${address_store_zero} + 5); Paste() # 下線付き全角縦書き
+
+    Select(65552); Clear() # Temporary glyph
+
+# スラッシュ0を作成
+    # 通常 (上付き、下付きは後で加工)
+    Select(${address_store_zero}); Copy() # 保管したドット無し0
+    Select(${address_store_zero} + 6); Paste() # 保管所
+    Select(0u002f); Copy() # /
+    Select(65552);  Paste() # Temporary glyph
+    Rotate(-20)
+    Scale(53, 55)
+    Copy()
+    PasteWithOffset(0,  10)
+    PasteWithOffset(0, -10)
+    RemoveOverlap()
+    Copy()
+    Select(${address_store_zero} + 6) # 保管所
+    PasteWithOffset(0, 45)
+    RemoveOverlap()
+    SetWidth(${width_latin})
+    Copy()
+    Select(${address_store_zero} + 3 + 6); Paste() # 下線無し全角
+    Select(${address_store_zero} + 4 + 6); Paste() # 下線付き全角横書き
+    Select(${address_store_zero} + 5 + 6); Paste() # 下線付き全角縦書き
 
     Select(65552); Clear() # Temporary glyph
 
@@ -1421,6 +1458,14 @@ while (i < SizeOf(input_list))
     # 保管した下付きドット無し0
     Select(${address_store_zero}); Copy() # 保管所 (通常の0)
     Select(${address_store_zero} + 2); Paste() # 保管所
+    Scale(${scale_width_super_sub}, ${scale_height_super_sub}, ${width_latin} / 2, 0)
+    Move(0, ${move_y_sub})
+    Scale(${scale_super_sub2}, ${width_latin} / 2, ${move_y_sub} + ${center_height_super_sub})
+    SetWidth(${width_latin})
+
+    # 保管した下付きスラッシュ0
+    Select(${address_store_zero} + 6); Copy() # 保管所 (通常の0)
+    Select(${address_store_zero} + 2 + 6); Paste() # 保管所
     Scale(${scale_width_super_sub}, ${scale_height_super_sub}, ${width_latin} / 2, 0)
     Move(0, ${move_y_sub})
     Scale(${scale_super_sub2}, ${width_latin} / 2, ${move_y_sub} + ${center_height_super_sub})
@@ -1657,6 +1702,14 @@ while (i < SizeOf(input_list))
     Scale(${scale_super_sub2}, ${width_latin} / 2, ${move_y_super} + ${center_height_super_sub})
     SetWidth(${width_latin})
 
+    # 保管した上付きスラッシュ0
+    Select(${address_store_zero} + 6); Copy() # 保管所 (通常の0)
+    Select(${address_store_zero} + 1 + 6); Paste() # 保管所
+    Scale(${scale_width_super_sub}, ${scale_height_super_sub}, ${width_latin} / 2, 0)
+    Move(0, ${move_y_super})
+    Scale(${scale_super_sub2}, ${width_latin} / 2, ${move_y_super} + ${center_height_super_sub})
+    SetWidth(${width_latin})
+
  #    sups = [0u1d3b, 0u1d46, 0u1d4c, 0u1d4e, 0u02e4] # ᴻᵆᵌᵎˤ # 基本のグリフ無し、上付きのみ
  #    j = 0
  #    while (j < SizeOf(sups))
@@ -1818,7 +1871,8 @@ while (i < SizeOf(input_list))
         endloop
 
         Select(${address_store_mod}, ${address_store_mod} + ${num_mod_glyphs} * 6 - 1) # 保管したDQVZ
-        SelectMore(${address_store_zero}, ${address_store_zero} + 5) # 保管したスラッシュ無し0
+        SelectMore(${address_store_zero}, ${address_store_zero} + 5) # 保管したドット無し0
+        SelectMore(${address_store_zero} + 6, ${address_store_zero} + 5 + 6) # 保管したスラッシュ0
         SelectMore(${address_store_visi_latin}, ${address_store_visi_latin} + 1) # 保管した ⁄|
         Scale(${scale_width_latin}, ${scale_height_latin}, ${width_latin} / 2, 0)
         Move(${move_x_hankaku_latin}, 0)
@@ -1887,7 +1941,8 @@ while (i < SizeOf(input_list))
         endloop
 
         Select(${address_store_mod}, ${address_store_mod} + ${num_mod_glyphs} * 6 - 1) # 保管したDQVZ
-        SelectMore(${address_store_zero}, ${address_store_zero} + 5) # 保管したスラッシュ無し0
+        SelectMore(${address_store_zero}, ${address_store_zero} + 5) # 保管したドット無し0
+        SelectMore(${address_store_zero} + 6, ${address_store_zero} + 5 + 6) # 保管したスラッシュ0
         SelectMore(${address_store_visi_latin}, ${address_store_visi_latin} + 1) # 保管した ⁄|
         Scale(${scale_width_hankaku}, ${scale_height_hankaku}, ${width_hankaku} / 2, 0)
         SetWidth(${width_hankaku})
@@ -2506,6 +2561,24 @@ while (i < \$argc)
 
     Select(65552); Clear() # Temporary glyph
 
+# ベンゼン環
+    Select(0uf02d9); Copy() # 󰋙
+    Select(0u23e3); Paste() # ⏣
+    ChangeWeight(-40)
+    CorrectDirection()
+    Select(0uf4aa); Copy() # 
+    Select(65552); Paste() # Temporary glyph
+    Scale(60)
+    Copy()
+    Select(0u23e3); PasteInto() # ⏣
+    Scale(65)
+    ChangeWeight(6)
+    CorrectDirection()
+    Move(-256, 0)
+    SetWidth(512)
+
+    Select(65552); Clear() # Temporary glyph
+
 # 八卦
     Print("Edit bagua trigrams")
     Select(0u2630); Copy() # ☰
@@ -3063,7 +3136,7 @@ while (i < \$argc)
         j += 1
     endloop
 
-# 保管しているスラッシュ無し0に下線追加
+# 保管しているドット無し0に下線追加
     Select(${address_store_zero}); Copy() # 下線無し時の半角
     Select(${address_store_zero} + 3); Paste() # 下線無し全角
     Move(256 - ${move_x_hankaku}, 0)
@@ -3076,6 +3149,21 @@ while (i < \$argc)
     SetWidth(${width_zenkaku})
     Select(${address_store_underline} + 2); Copy() # 縦線追加
     Select(${address_store_zero} + 5); PasteInto() # 下線付き全角縦書き
+    SetWidth(${width_zenkaku})
+
+# 保管しているスラッシュ0に下線追加
+    Select(${address_store_zero} + 6); Copy() # 下線無し時の半角
+    Select(${address_store_zero} + 3 + 6); Paste() # 下線無し全角
+    Move(256 - ${move_x_hankaku}, 0)
+    SetWidth(${width_zenkaku})
+    Copy()
+    Select(${address_store_zero} + 4 + 6); Paste() # 下線付き全角横書き
+    Select(${address_store_zero} + 5 + 6); Paste() # 下線付き全角縦書き
+    Select(${address_store_underline}); Copy() # 下線追加
+    Select(${address_store_zero} + 4 + 6); PasteInto() # 下線付き全角横書き
+    SetWidth(${width_zenkaku})
+    Select(${address_store_underline} + 2); Copy() # 縦線追加
+    Select(${address_store_zero} + 5 + 6); PasteInto() # 下線付き全角縦書き
     SetWidth(${width_zenkaku})
 
 # 半角文字に下線を追加 (ベースフォントのグリフを使うため、カウンターのみ進める)
@@ -3145,7 +3233,7 @@ while (i < \$argc)
         Print("Set neutral and ambiguous characters to hankaku")
 
         Select(0u2014) # —
-        SelectMore(${address_store_visi_kana} + 4) # 保管所
+        SelectMore(${address_store_visi_kana} + 3) # 保管所
         Scale(${scale_zenkaku2hankaku} * ${width_hankaku} / ${width_hankaku_loose}, 100, ${width_zenkaku} / 2, 0)
         Move(-(${width_zenkaku} / 2 - ${width_hankaku} / 2), 0)
         Copy()
@@ -3236,7 +3324,7 @@ while (i < \$argc)
         SelectMore(0u24eb, 0u24ff) # ⓫-⓿
         SelectMore(0u2776, 0u277f) # ❶-❿
         SelectMore(0u2780, 0u2793) # ➀-➓
-        SelectMore(${address_store_visi_kana} + 6, ${address_store_visi_kana} + 25) # 保管所
+        SelectMore(${address_store_visi_kana} + 5, ${address_store_visi_kana} + 24) # 保管所
         foreach
             if (WorthOutputting())
                 if (600 <= GlyphInfo("Width"))
@@ -4449,7 +4537,10 @@ while (i < \$argc)
 
     j = ${num_ss_lookups}
     while (0 < j) # ssルックアップの数だけ確保する
-        if (j < 10)
+        if (j == 14)
+            lookupName = "'ss" + ToString(19) + "' スタイルセット" + ToString(19)
+            AddLookup(lookupName, "gsub_single", 0, [["ss" + ToString(19),[["DFLT",["dflt"]]]]], lookups[numlookups - 1])
+        elseif (j < 10)
             lookupName = "'ss0" + ToString(j) + "' スタイルセット" + ToString(j)
             AddLookup(lookupName, "gsub_single", 0, [["ss0" + ToString(j),[["DFLT",["dflt"]]]]], lookups[numlookups - 1])
         else
@@ -4755,15 +4846,15 @@ while (i < \$argc)
     lookupSub = lookupName + "サブテーブル"
 
     orig = [0u2044, 0u007c,\
-            0u30a0, 0u2f23, 0u2013, 0ufe32, 0u2014, 0ufe31] # ⁄| ゠⼣–︲—︱
+            0u30a0, 0u2013, 0ufe32, 0u2014, 0ufe31] # ⁄| ゠–︲—︱
     j = 0
     l = 0
     while (j < SizeOf(orig))
         Select(${address_store_visi_latin} + l); Copy()
         Select(k); Paste()
-        if (j <= 1 || j == 4)
+        if (j <= 1 || j == 3)
             SetWidth(${width_hankaku})
-        elseif (j == 6 && "${term_flag}" == "true")
+        elseif (j == 5 && "${term_flag}" == "true")
             SetWidth(${width_hankaku})
         else
             SetWidth(${width_zenkaku})
@@ -4795,7 +4886,7 @@ while (i < \$argc)
 
     orig = [0u3007, 0u4e00, 0u4e8c, 0u4e09,\
             0u5de5, 0u529b, 0u5915, 0u535c,\
-            0u53e3] # 〇一二三 工力夕卜 口
+            0u53e3, 0u4e8e, 0u4e95, 0u5b50] # 〇一二三 工力夕卜 口于井子
     j = 0
     while (j < SizeOf(orig))
         Select(${address_store_visi_latin} + l); Copy()
@@ -4887,6 +4978,11 @@ while (i < \$argc)
     glyphName = GlyphInfo("Name")
     Select(${address_calt_hyphenR} + ${address_calt_barDLR} + 4)
     AddPosSub(lookupSub, glyphName)
+    k += 1
+
+    Select(k); Clear(); SetWidth(${width_hankaku}) # ダミー (リガチャ対応フォントとアドレスを合わせるため(最大2個))
+    k += 1
+    Select(k); Clear(); SetWidth(${width_hankaku}) # ダミー (リガチャ対応フォントとアドレスを合わせるため(最大2個))
     k += 1
 
     ss += 1
@@ -5017,7 +5113,7 @@ while (i < \$argc)
     endloop
 
     ss += 1
-# ss10 スラッシュ無し0
+# ss10 ドット無し0
     lookupName = "'ss" + ToString(ss) + "' スタイルセット" + ToString(ss)
     lookupSub = lookupName + "サブテーブル"
 
@@ -5084,7 +5180,7 @@ while (i < \$argc)
     k += 1
 
     # 小数
-    Select(${address_store_zero}); Copy() # スラッシュ無し0
+    Select(${address_store_zero}); Copy() # ドット無し0
     Select(k); Paste()
     Scale(${scale_calt_decimal}, ${scale_calt_decimal}, ${width_hankaku} / 2, 0)
     SetWidth(${width_hankaku})
@@ -5363,8 +5459,9 @@ while (i < \$argc)
             0u25c6, 0u25c7,\
             0u25cb,\
             0u25ce, 0u25cf,\
+            0u25ef,\
             0u2605, 0u2606\
-            ] # ■□ ▲△ ▶▷ ▼▽ ◀◁ ◆◇ ○ ◎● ★☆
+            ] # ■□ ▲△ ▶▷ ▼▽ ◀◁ ◆◇ ○ ◎● ◯ ★☆
     j = 0
     while (j < SizeOf(orig))
         Select(orig[j]); Copy()
@@ -5460,7 +5557,115 @@ while (i < \$argc)
     AddPosSub(lookupSub, glyphName)
     k += 1
 
-    ss += 1
+    ss = 19
+# ss19 スラッシュ0
+    lookupName = "'ss" + ToString(ss) + "' スタイルセット" + ToString(ss)
+    lookupSub = lookupName + "サブテーブル"
+
+    zero = [0u0030, 0u2070, 0u2080] # 0⁰₀
+    j = 0
+    while (j < SizeOf(zero))
+        Select(${address_store_zero} + j + 6); Copy()
+        Select(k); Paste()
+        SetWidth(${width_hankaku})
+        glyphName = GlyphInfo("Name")
+        Select(zero[j])
+        AddPosSub(lookupSub, glyphName)
+        if (j == 0)
+            Select(${address_calt_figure}) # caltで変換したグリフ (3桁) からの変換
+            AddPosSub(lookupSub, glyphName)
+            Select(${address_calt_figure} + 10) # caltで変換したグリフ (4桁) からの変換
+            AddPosSub(lookupSub, glyphName)
+            Select(${address_calt_figure} + 20) # caltで変換したグリフ (12桁) からの変換
+            AddPosSub(lookupSub, glyphName)
+            Select(${address_calt_figure} + 30) # caltで変換したグリフ (小数) からの変換
+            AddPosSub(lookupSub, glyphName)
+        endif
+        j += 1
+        k += 1
+    endloop
+
+    # 3桁区切り
+    Select(${address_store_b_diagram}); Copy() # 保管した▲
+    Select(k); Paste()
+    Scale(15, 27)
+    Move(${move_x_calt_separate}, ${move_y_calt_separate3})
+    Copy(); Select(k + 2); Paste() # 12桁用
+    Select(${address_store_zero} + 6); Copy()
+    Select(k); PasteInto()
+    SetWidth(${width_hankaku})
+    glyphName = GlyphInfo("Name")
+    Select(${address_ss_figure}) # ssで変換したグリフからの変換
+    AddPosSub(lookupSub, glyphName)
+    Select(${address_ss_figure} + 40) # ssで変換したグリフ (3桁に偽装した12桁) からの変換
+    AddPosSub(lookupSub, glyphName)
+    k += 1
+
+    # 4桁区切り
+    Select(${address_store_b_diagram} + 1); Copy() # 保管した▼
+    Select(k); Paste()
+    Scale(15, 27)
+    Move(${move_x_calt_separate}, ${move_y_calt_separate4})
+    Copy(); Select(k + 1); PasteInto() # 12桁用
+    Select(${address_store_zero} + 6); Copy()
+    Select(k); PasteInto()
+    SetWidth(${width_hankaku})
+    glyphName = GlyphInfo("Name")
+    Select(${address_ss_figure} + 10) # ssで変換したグリフからの変換
+    AddPosSub(lookupSub, glyphName)
+    k += 1
+
+    # 12桁区切り
+    Select(${address_store_zero} + 6); Copy()
+    Select(k); PasteInto()
+    SetWidth(${width_hankaku})
+    glyphName = GlyphInfo("Name")
+    Select(${address_ss_figure} + 20) # ssで変換したグリフからの変換
+    AddPosSub(lookupSub, glyphName)
+    k += 1
+
+    # 小数
+    Select(${address_store_zero} + 6); Copy() # スラッシュ0
+    Select(k); Paste()
+    Scale(${scale_calt_decimal}, ${scale_calt_decimal}, ${width_hankaku} / 2, 0)
+    SetWidth(${width_hankaku})
+    glyphName = GlyphInfo("Name")
+    Select(${address_ss_figure} + 30) # ssで変換したグリフからの変換
+    AddPosSub(lookupSub, glyphName)
+    k += 1
+
+    # 全角
+    # (デフォルトで下線無しにする場合はコメントアウトを変更し、glyphName を付加する Select 対象を変える)
+
+    Select(${address_store_zero} + 4 + 6); Copy() # 下線付き横書き
+    Select(k); Paste()
+    SetWidth(${width_zenkaku})
+    glyphName = GlyphInfo("Name")
+    Select(0uff10) # 変換前横書き
+ #    Select(${address_ss_zenhan} + 15) # ss変換後横書き
+    AddPosSub(lookupSub, glyphName)
+    k += 1
+
+    Select(${address_store_zero} + 5 + 6); Copy() # 下線付き縦書き
+    Select(k); Paste()
+    SetWidth(${width_zenkaku})
+    glyphName = GlyphInfo("Name")
+    Select(${address_vert_bracket} + 33) # vert変換後ss変換前縦書き
+ #    Select(${address_ss_vert} + 33) # ss変換後縦書き
+    AddPosSub(lookupSub, glyphName)
+    k += 1
+
+    Select(${address_store_zero} + 3 + 6); Copy() # 下線無し全角
+    Select(k); Paste()
+    SetWidth(${width_zenkaku})
+    glyphName = GlyphInfo("Name")
+    Select(${address_ss_zenhan} + 15) # ss変換後横書き
+ #    Select(0uff10) # 変換前横書き
+    AddPosSub(lookupSub, glyphName)
+    Select(${address_ss_vert} + 33) # ss変換後縦書き
+ #    Select(${address_vert_bracket} + 33) # vert変換後ss変換前縦書き
+    AddPosSub(lookupSub, glyphName)
+    k += 1
 
 # 一旦削除した sups を追加
     Print("Add sups lookups")
@@ -6021,8 +6226,8 @@ while (i < \$argc)
     SelectFewer(${address_store_underline}, ${address_store_underline} + 2) # 保管した下線
     SelectFewer(${address_store_braille}, ${address_store_braille} + 255) # 保管した点字
     SelectFewer(${address_store_line}, ${address_store_line} + 31) # 保管した罫線
-    SelectFewer(${address_store_visi_kana} + 3) # 保管した︲
-    SelectFewer(${address_store_visi_kana} + 5) # 保管した︱
+    SelectFewer(${address_store_visi_kana} + 2) # 保管した︲
+    SelectFewer(${address_store_visi_kana} + 4) # 保管した︱
     SelectFewer(${address_store_arrow}, ${address_store_arrow} + 3) # 保管した矢印
     SelectFewer(${address_store_vert}, ${address_store_vert} + 1) # 保管した縦書きの縦線無し（）
     SelectFewer(${address_store_vert} + 4, ${address_store_vert} + 19) # 保管した縦書きの縦線無し： - ｠
@@ -6087,16 +6292,28 @@ while (i < \$argc)
         j += 1
     endloop
 
-    Select(${address_store_zero} + 3); Copy() # 保管した全角のスラッシュ無し０
-    Select(${address_store_zero} + 4); Paste() # 保管した横書きのスラッシュ無し０
+    Select(${address_store_zero} + 3); Copy() # 保管した全角のドット無し0
+    Select(${address_store_zero} + 4); Paste() # 保管した横書きのドット無し0
     Select(${address_store_underline}); Copy() # 下線追加
-    Select(${address_store_zero} + 4); PasteInto() # 保管した横書きのスラッシュ無し０
+    Select(${address_store_zero} + 4); PasteInto() # 保管した横書きのドット無し0
     SetWidth(${width_zenkaku})
 
-    Select(${address_store_zero} + 3); Copy() # 保管した全角のスラッシュ無し０
-    Select(${address_store_zero} + 5); Paste() # 保管した縦書きのスラッシュ無し０
+    Select(${address_store_zero} + 3); Copy() # 保管した全角のドット無し0
+    Select(${address_store_zero} + 5); Paste() # 保管した縦書きのドット無し0
     Select(${address_store_underline} + 2); Copy() # 縦線追加
-    Select(${address_store_zero} + 5); PasteInto() # 保管した縦書きのスラッシュ無し０
+    Select(${address_store_zero} + 5); PasteInto() # 保管した縦書きのドット無し0
+    SetWidth(${width_zenkaku})
+
+    Select(${address_store_zero} + 3 + 6); Copy() # 保管した全角のスラッシュ0
+    Select(${address_store_zero} + 4 + 6); Paste() # 保管した横書きのスラッシュ0
+    Select(${address_store_underline}); Copy() # 下線追加
+    Select(${address_store_zero} + 4 + 6); PasteInto() # 保管した横書きのスラッシュ0
+    SetWidth(${width_zenkaku})
+
+    Select(${address_store_zero} + 3 + 6); Copy() # 保管した全角のスラッシュ0
+    Select(${address_store_zero} + 5 + 6); Paste() # 保管した縦書きのスラッシュ0
+    Select(${address_store_underline} + 2); Copy() # 縦線追加
+    Select(${address_store_zero} + 5 + 6); PasteInto() # 保管した縦書きのスラッシュ0
     SetWidth(${width_zenkaku})
 
     Select("uniFF08.vert")
@@ -6139,16 +6356,28 @@ while (i < \$argc)
         j += 1
     endloop
 
-    Select(${address_store_zero} + 3); Copy() # 保管した全角のスラッシュ無し０
-    Select("uniFF10.ss10"); Paste() # 横書きのスラッシュ無し０
+    Select(${address_store_zero} + 3); Copy() # 保管した全角のドット無し0
+    Select("uniFF10.ss10"); Paste() # 横書きのドット無し0
     Select(${address_store_underline}); Copy() # 下線追加
-    Select("uniFF10.ss10"); PasteInto() # 横書きのスラッシュ無し０
+    Select("uniFF10.ss10"); PasteInto() # 横書きのドット無し0
     SetWidth(${width_zenkaku})
 
-    Select(${address_store_zero} + 3); Copy() # 保管した全角のスラッシュ無し０
-    Select("uniFF10.vert.ss10"); Paste() # 縦書きのスラッシュ無し０
+    Select(${address_store_zero} + 3); Copy() # 保管した全角のドット無し0
+    Select("uniFF10.vert.ss10"); Paste() # 縦書きのドット無し0
     Select(${address_store_underline} + 2); Copy() # 縦線追加
-    Select("uniFF10.vert.ss10"); PasteInto() # 縦書きのスラッシュ無し０
+    Select("uniFF10.vert.ss10"); PasteInto() # 縦書きのドット無し0
+    SetWidth(${width_zenkaku})
+
+    Select(${address_store_zero} + 3 + 6); Copy() # 保管した全角のスラッシュ0
+    Select("uniFF10.ss19"); Paste() # 横書きのスラッシュ0
+    Select(${address_store_underline}); Copy() # 下線追加
+    Select("uniFF10.ss19"); PasteInto() # 横書きのスラッシュ0
+    SetWidth(${width_zenkaku})
+
+    Select(${address_store_zero} + 3 + 6); Copy() # 保管した全角のスラッシュ0
+    Select("uniFF10.vert.ss19"); Paste() # 縦書きのスラッシュ0
+    Select(${address_store_underline} + 2); Copy() # 縦線追加
+    Select("uniFF10.vert.ss19"); PasteInto() # 縦書きのスラッシュ0
     SetWidth(${width_zenkaku})
 
     j = 0
@@ -6369,12 +6598,14 @@ while (i < \$argc)
         # 破線・ウロコ等
         k = 0
         orig = [0u2044, 0u007c,\
-                0u30a0, 0u2f23, 0u2013, 0ufe32, 0u2014, 0ufe31] # ⁄| ゠⼣–︲—︱
+                0u30a0, 0u2013, 0ufe32, 0u2014, 0ufe31] # ⁄| ゠–︲—︱
         j = 0
         while (j < SizeOf(orig))
             Select(${address_store_visi_latin} + k); Copy()
             Select(orig[j]); Paste()
-            if (j <= 1 || j == 4)
+            if (j <= 1 || j == 3)
+                SetWidth(${width_hankaku})
+            elseif (j == 5 && "${term_flag}" == "true")
                 SetWidth(${width_hankaku})
             else
                 SetWidth(${width_zenkaku})
@@ -6386,13 +6617,17 @@ while (i < \$argc)
         while (j < 20) # ➀-➓
             Select(${address_store_visi_latin} + k); Copy()
             Select(0u2780 + j); Paste()
-            SetWidth(${width_zenkaku})
+            if ("${term_flag}" == "true")
+                SetWidth(${width_hankaku})
+            else
+                SetWidth(${width_zenkaku})
+            endif
             j += 1
             k += 1
         endloop
         orig = [0u3007, 0u4e00, 0u4e8c, 0u4e09,\
                 0u5de5, 0u529b, 0u5915, 0u535c,\
-                0u53e3] # 〇一二三 工力夕卜 口
+                0u53e3, 0u4e8e, 0u4e95, 0u5b50] # 〇一二三 工力夕卜 口于井子
         j = 0
         while (j < SizeOf(orig))
             Select(${address_store_visi_latin} + k); Copy()
@@ -6431,9 +6666,9 @@ while (i < \$argc)
         endloop
     endif
 
-# スラッシュ無し0
-    if ("${slashed_zero_flag}" == "false")
-        Print("Option: Disable slashed zero")
+# ドット無し0
+    if ("${zero_mode}" == "0")
+        Print("Option: Disable doted zero")
         # 半角、全角
         zero = [0u0030, 0u2070, 0u2080, 0u0000,\
                 0uff10, "uniFF10.vert"] # 0⁰₀０縦書き０ (0u0000はダミー)
@@ -6469,6 +6704,43 @@ while (i < \$argc)
             j += 1
         endloop
 
+# スラッシュ0
+    elseif ("${zero_mode}" == "2")
+        Print("Option: Enable another zero")
+        # 半角、全角
+        zero = [0u0030, 0u2070, 0u2080, 0u0000,\
+                0uff10, "uniFF10.vert"] # 0⁰₀０縦書き０ (0u0000はダミー)
+        j = 0
+        while (j < SizeOf(zero))
+            if (j != 3)
+                Select(${address_store_zero} + j + 6); Copy()
+                Select(zero[j]); Paste()
+                if (j < 3)
+                    SetWidth(${width_hankaku})
+                else
+                    SetWidth(${width_zenkaku})
+                endif
+            endif
+            j += 1
+        endloop
+
+        # 下線無し
+        if ("${underline_flag}" == "false")
+            Select(${address_store_zero} + 3 + 6); Copy()
+            Select(0uff10) # ０
+            SelectMore("uniFF10.vert") # 縦書き０
+            Paste()
+            SetWidth(${width_zenkaku})
+        endif
+
+        # 桁区切り
+        j = 0
+        while (j < 4)
+            Select(${address_ss_zero2} + 3 + j); Copy()
+            Select(${address_calt_figure} + j * 10); Paste()
+            SetWidth(${width_hankaku})
+            j += 1
+        endloop
     endif
 
 # 桁区切りなし・小数を元に戻す
