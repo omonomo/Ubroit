@@ -41,13 +41,13 @@ Ubroit (うぶろいと) はコーディングにもお使いいただける日�
 
 ## ダウンロード
 
-最新版 v1.5.0 (2026-03-16)
+最新版 v1.6.0 (2026-05-24)
 
 | リンク                                                                                                      | 説明                                            |
 | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| [フォント (Ubroit)](https://github.com/omonomo/Ubroit/releases/download/v1.5.0/Ubroit_v1.5.0.zip)           | 通常版。半角幅が全角の1/2。                     |
-| [フォント (UbroitLoose)](https://github.com/omonomo/Ubroit/releases/download/v1.5.0/UbroitLoose_v1.5.0.zip) | 文字間隔ゆるい版。半角幅が全角の9/16。          |
-| [ソースコード](https://github.com/omonomo/Ubroit/archive/refs/tags/v1.5.0.zip)                              | 使用方法は[下の方](#基本的な使い方)にあります。 |
+| [フォント (Ubroit)](https://github.com/omonomo/Ubroit/releases/download/v1.6.0/Ubroit_v1.6.0.zip)           | 通常版。半角幅が全角の1/2。                     |
+| [フォント (UbroitLoose)](https://github.com/omonomo/Ubroit/releases/download/v1.6.0/UbroitLoose_v1.6.0.zip) | 文字間隔ゆるい版。半角幅が全角の9/16。          |
+| [ソースコード](https://github.com/omonomo/Ubroit/archive/refs/tags/v1.6.0.zip)                              | 使用方法は[下の方](#基本的な使い方)にあります。 |
 
 フォントやスクリプトの使用は自己責任にてお願いいたします。  
 各ファイルを使用することで生じた不具合・損害等について omonomo は責任を負いません。  
@@ -126,7 +126,7 @@ Loose 版は名称が 「UbroitLoose...」 になります。
 | Ubroit    | <img alt="Normal" src="./images/Normal.png" width="268"> | 通常版。スタイルセット対応。<br> 内容については後述。                                                                   |
 | Ubroit EH | <img alt="EH" src="./images/EH.png" width="268">         | 絵文字減らした版。スタイルセット対応。別の絵文字フォントとの併用推奨。<br>(サンプルの㊙は Apple Color Emoji のものです) |
 | Ubroit BS | <img alt="BS" src="./images/BS.png" width="268">         | 基本版。<br> 全角スペースを可視化しています。                                                                           |
-| Ubroit SP | <img alt="SP" src="./images/SP.png" width="268">         | スペシャルスペース版。<br> 半角スペース、ノーブレークスペースも可視化したバージョン。                                   |
+| Ubroit SP | <img alt="SP" src="./images/SP.png" width="268">         | スペシャルスペース版。<br> 半角スペース、ノーブレークスペースや em スペース等も可視化したバージョン。                   |
 | Ubroit DG | <img alt="DG" src="./images/DG.png" width="268">         | 桁区切り表示版。<br> たくさん並んだ数字とにらめっこする時間を短縮できます。                                             |
 | Ubroit FX | <img alt="TS" src="./images/FX.png" width="268">         | 文字間隔固定版。calt と相性が悪いソフト用。<br> また他のバージョンよりも軽快に動作します。                              |
 | Ubroit HB | <img alt="HB" src="./images/HB.png" width="268">         | 平凡版。全てのスペースが不可視でグリフ改変も抑えたバージョン。<br> プリントアウト用にどうぞ。                           |
@@ -139,7 +139,7 @@ Loose 版は名称が 「UbroitLoose...」 になります。
 | タグ名 | サンプル                                             | 内容                                                                                        |
 | ------ | ---------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | ss01   | <img alt="ss01" src="./images/ss01.png" width="268"> | 全角スペース可視化                                                                          |
-| ss02   | <img alt="ss02" src="./images/ss02.png" width="268"> | 半角スペース可視化                                                                          |
+| ss02   | <img alt="ss02" src="./images/ss02.png" width="268"> | 半角スペース、ノーブレークスペース可視化                                                    |
 | ss03   | <img alt="ss03" src="./images/ss03.png" width="268"> | 3桁区切りマーク表示                                                                         |
 | ss04   | <img alt="ss04" src="./images/ss04.png" width="268"> | 4桁区切りマーク表示                                                                         |
 | ss05   | <img alt="ss05" src="./images/ss05.png" width="268"> | 小数小文字化                                                                                |
@@ -148,7 +148,7 @@ Loose 版は名称が 「UbroitLoose...」 になります。
 | ss08   | <img alt="ss08" src="./images/ss08.png" width="268"> | DQVZ のグリフ変更                                                                           |
 | ss09   | <img alt="ss09" src="./images/ss09.png" width="268"> | JIS に含まれる罫線を全角化、矢印を細線化<br> (環境によって全角にならないことがあります)     |
 | ss10   | <img alt="ss10" src="./images/ss10.png" width="268"> | 0のドット消去                                                                               |
-| ss11   | <img alt="ss11" src="./images/ss11.png" width="268"> | ss01、ss02で表示される以外のスペース可視化<br> (環境によって可視化されないことがあります)   |
+| ss11   | <img alt="ss11" src="./images/ss11.png" width="268"> | 全角、半角以外のスペース可視化<br> (環境によって可視化されないことがあります)               |
 | ss12   | <img alt="ss12" src="./images/ss12.png" width="268"> | ファイル名に使われがちな曖昧幅の文字を半角化<br> (環境によって半角にならないことがあります) |
 | ss13   | <img alt="ss13" src="./images/ss13.png" width="268"> | バックスラッシュ細線化<br> (2つ並んだ場合、右側は通常の太さになります)                      |
 | ss19   | <img alt="ss19" src="./images/ss19.png" width="268"> | スラッシュ0に置き換え<br> (ss10が優先されます)                                              |
@@ -166,18 +166,18 @@ Loose 版は名称が 「UbroitLoose...」 になります。
 
 Ubroit は以下の環境でビルドできることを確認しています。
 
-- macOS Tahoe 26.3.1
+- macOS Tahoe 26.5
 - GNU bash, version 5.3.9(1)-release (aarch64-apple-darwin25.1.0)
 - FontForge 20251009
-- FontTools 4.62.1
+- FontTools 4.63.0
 
 または上記 macOS 上にて
 
-- Docker Desktop 4.61.0 (Engine 29.2.1, Compose v5.1.0)
-  - Ubuntu 24.04.4 LTS
-  - GNU bash, version 5.2.21(1)-release (aarch64-unknown-linux-gnu)
+- Docker Desktop 4.74.0 (Engine 29.4.3, Compose v5.1.4)
+  - Ubuntu 26.04 LTS
+  - GNU bash, version 5.3.9(1)-release (aarch64-unknown-linux-gnu)
   - FontForge 20230101
-  - FontTooles 4.46.0
+  - FontTooles 4.61.1
 
 ### 基本的な使い方
 
@@ -221,7 +221,7 @@ Cyroit の生成スクリプトと使い方は同じです。
 (例) 接尾語に「NoNF」を付けて、Nerd Fonts 抜きの基本版 (完成品) を生成する場合
 
 ```
-./run_ff_ttx.sh -F -n "NoNF" ztse
+./run_ff_ttx.sh -F -n "NoNF" zytse
 ```
 
 - オプション  
@@ -260,7 +260,7 @@ FontForge のスクリプト機能を利用してフォントの合成とグリ�
 (例) 下書きモードで平凡版を生成する場合
 
 ```
-./font_generator.sh -dZzubts auto
+./font_generator.sh -dZzyubts auto
 ```
 
 - オプション  
@@ -277,6 +277,7 @@ FontForge のスクリプト機能を利用してフォントの合成とグリ�
   `-a` 私用領域以外の中立・曖昧な幅の文字を半角にします。  
   `-Z` 全角スペースを可視化しません。  
   `-z` 半角スペースを可視化しません。  
+  `-y` その他のスペースを可視化しません。ノーブレークスペース (U+00A0) を不可視にする場合は `-xy` を指定してください。  
   `-u` 全角・半角形に下線を付けません。また点字に外枠を付けません。  
   `-b` 識別性を向上させるためのグリフ改変をしません。  
   `-t` D Q V Z のグリフを変更 (ストローク等を追加) しません。  
@@ -287,7 +288,7 @@ FontForge のスクリプト機能を利用してフォントの合成とグリ�
   `-e` Nerd Fonts を追加しません。また Nerd Fonts を利用して作成・改変されたグリフも追加されません。  
   `-o` オブリーク体を生成しません。  
   `-j` 絵文字のグリフを減らします。  
-  `-S` ss 対応のフォントにします。自動的に `-Zzts` が有効、`-ubOQc` が無効になります。  
+  `-S` ss 対応のフォントにします。自動的に `-Zzyts` が有効、`-ubOQc` が無効になります。  
   `-d` 下書きモードで合成します。時間のかかる処理を飛ばしますが、完成品と見た目が少し異なる文字があります。  
   &emsp; &emsp;`-o` も有効になります。改変したグリフの確認用です。  
   `-P` font_generator は一旦全ての機能を実装した後にオプションに従って機能を削っていきますが、その直前で処理を終了します。  
